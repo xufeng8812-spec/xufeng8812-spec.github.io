@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>人形机器人解决方案 - 上海逸昂信息技术有限公司</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            DEFAULT: '#003366',
+                            light: '#00509E',
+                        },
+                        secondary: {
+                            DEFAULT: '#CC0000',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .text-shadow {
+                text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+            }
+        }
+    </style>
+    <style>
+        .hero-section {
+            background-image: url('https://img.freepik.com/free-vector/blue-digital-network-background_23-2148288107.jpg?w=996&t=st=1695114413~exp=1695115013~hmac=8b0a5c3b6c37a1f3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800">
+
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <a href="index.html" class="flex items-center">
+                    <img src="https://p26-flow-imagex-download-sign.byteimg.com/tos-cn-i-a9rns2rl98/2421e9a432e54d2493a50f2c6d331314.png~tplv-a9rns2rl98-24:720:720.png?lk3s=8e244e95&amp;rcl=202602122309233E8BF3D6458BA43E933D&amp;rrcfp=8a172a1a&amp;x-expires=1771513763&amp;x-signature=kxU64KMyljY4Em7ZhWyjpi0NgbI%3D" alt="上海逸昂信息技术有限公司" class="h-12 mr-3">
+                    <div class="hidden md:block">
+                        <div class="text-primary text-xl font-bold">上海逸昂信息技术</div>
+                        <div class="text-xs text-gray-500">西门子Simcenter铂金代理商</div>
+                    </div>
+                </a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-dark hover:text-primary transition-all-300">首页</a>
+                    <div class="relative group">
+                        <a href="index.html#about" class="text-dark hover:text-primary transition-all-300 flex items-center">
+                            关于我们
+                            <i class="fa fa-angle-down ml-1 text-xs"></i>
+                        </a>
+                        <div class="absolute left-0 top-full mt-1 bg-white shadow-lg rounded-md overflow-hidden w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                            <a href="vision.html" class="block px-4 py-2 text-dark hover:bg-primary hover:text-white transition-all-300">企业愿景</a>
+                            <a href="history.html" class="block px-4 py-2 text-dark hover:bg-primary hover:text-white transition-all-300">企业历史</a>
+                            <a href="clients.html" class="block px-4 py-2 text-dark hover:bg-primary hover:text-white transition-all-300">我们的客户</a>
+                        </div>
+                    </div>
+                    <div class="relative group">
+                        <a href="index.html#products" class="text-dark hover:text-primary transition-all-300 flex items-center">
+                            产品中心
+                            <i class="fa fa-angle-down ml-1 text-xs"></i>
+                        </a>
+                        <div class="absolute left-0 top-full mt-1 bg-white shadow-lg rounded-md overflow-hidden w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                            <a href="simcenter-3d.html" class="block px-4 py-2 text-dark hover:bg-primary hover:text-white transition-all-300">Simcenter 3D</a>
+                            <a href="simcenter-star-ccm.html" class="block px-4 py-2 text-dark hover:bg-primary hover:text-white transition-all-300">Simcenter STAR-CCM+</a>
+                            <a href="simcenter-amesim.html" class="block px-4 py-2 text-dark hover:bg-primary hover:text-white transition-all-300">Simcenter Amesim</a>
+                            <a href="simcenter-testlab.html" class="block px-4 py-2 text-dark hover:bg-primary hover:text-white transition-all-300">Simcenter Testlab</a>
+                            <a href="simcenter-flotherm.html" class="block px-4 py-2 text-dark hover:bg-primary hover:text-white transition-all-300">Simcenter Flotherm</a>
+                            <a href="simcenter-floefd.html" class="block px-4 py-2 text-dark hover:bg-primary hover:text-white transition-all-300">Simcenter FloEFD</a>
+                        </div>
+                    </div>
+                    <div class="relative group">
+                        <a href="index.html#solutions" class="text-primary font-bold transition-all-300 flex items-center">
+                            解决方案
+                            <i class="fa fa-angle-down ml-1 text-xs"></i>
+                        </a>
+                        <div class="absolute left-0 top-full mt-1 bg-white shadow-lg rounded-md overflow-hidden w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                            <a href="automotive.html" class="block px-4 py-2 text-dark hover:bg-primary hover:text-white transition-all-300">汽车行业</a>
+                            <a href="evtol.html" class="block px-4 py-2 text-dark hover:bg-primary hover:text-white transition-all-300">Evtol</a>
+                            <a href="humanoid-robot.html" class="block px-4 py-2 bg-primary text-white transition-all-300">人形机器人</a>
+                            <a href="electronics.html" class="block px-4 py-2 text-dark hover:bg-primary hover:text-white transition-all-300">电子电器</a>
+                        </div>
+                    </div>
+                    <a href="index.html#contact" class="text-dark hover:text-primary transition-all-300">联系我们</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-dark">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg absolute w-full">
+            <div class="container mx-auto px-4 py-2">
+                <a href="index.html" class="block py-2 text-dark border-b border-gray-100">首页</a>
+                <div class="relative">
+                    <a href="index.html#about" class="text-dark py-2 border-b border-gray-100 flex items-center justify-between">
+                        关于我们
+                        <i class="fa fa-angle-down text-xs"></i>
+                    </a>
+                    <div class="pl-4 border-l-2 border-gray-100 ml-2 mt-1">
+                        <a href="vision.html" class="block py-2 text-dark text-sm">企业愿景</a>
+                        <a href="history.html" class="block py-2 text-dark text-sm">企业历史</a>
+                        <a href="clients.html" class="block py-2 text-dark text-sm">我们的客户</a>
+                    </div>
+                </div>
+                <div class="relative">
+                    <a href="index.html#products" class="text-dark py-2 border-b border-gray-100 flex items-center justify-between">
+                        产品中心
+                        <i class="fa fa-angle-down text-xs"></i>
+                    </a>
+                    <div class="pl-4 border-l-2 border-gray-100 ml-2 mt-1">
+                        <a href="simcenter-3d.html" class="block py-2 text-dark text-sm">Simcenter 3D</a>
+                        <a href="simcenter-star-ccm.html" class="block py-2 text-dark text-sm">Simcenter STAR-CCM+</a>
+                        <a href="simcenter-amesim.html" class="block py-2 text-dark text-sm">Simcenter Amesim</a>
+                        <a href="simcenter-testlab.html" class="block py-2 text-dark text-sm">Simcenter Testlab</a>
+                        <a href="simcenter-flotherm.html" class="block py-2 text-dark text-sm">Simcenter Flotherm</a>
+                        <a href="simcenter-floefd.html" class="block py-2 text-dark text-sm">Simcenter FloEFD</a>
+                    </div>
+                </div>
+                <div class="relative">
+                    <a href="index.html#solutions" class="text-primary font-bold py-2 border-b border-gray-100 flex items-center justify-between">
+                        解决方案
+                        <i class="fa fa-angle-down text-xs"></i>
+                    </a>
+                    <div class="pl-4 border-l-2 border-gray-100 ml-2 mt-1">
+                        <a href="automotive.html" class="block py-2 text-dark text-sm">汽车行业</a>
+                        <a href="evtol.html" class="block py-2 text-dark text-sm">Evtol</a>
+                        <a href="humanoid-robot.html" class="block py-2 text-primary font-bold text-sm">人形机器人</a>
+                        <a href="electronics.html" class="block py-2 text-dark text-sm">电子电器</a>
+                    </div>
+                </div>
+                <a href="index.html#contact" class="block py-2 text-dark">联系我们</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section text-white py-20">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4 text-shadow">人形机器人解决方案</h1>
+            <p class="text-lg md:text-xl max-w-3xl mx-auto">为人形机器人研发企业提供机械设计、控制算法、感知系统和能源管理的全方位仿真与测试解决方案，助力打造更智能、更稳定、更高效的人形机器人。</p>
+        </div>
+    </section>
+
+    <!-- Solution Overview -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                    <img src="https://img.freepik.com/free-vector/robot-with-digital-interface_23-2148817723.jpg?w=996&t=st=1695114413~exp=1695115013~hmac=8b0a5c3b6c37a1f3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3" alt="人形机器人解决方案" class="rounded-lg shadow-lg">
+                </div>
+                <div>
+                    <h2 class="text-3xl font-bold text-primary mb-4">方案概述</h2>
+                    <p class="text-gray-600 mb-4">人形机器人是机器人领域的“皇冠明珠”，集机械、电子、控制、计算机、人工智能等多学科于一体。上海逸昂信息技术有限公司凭借西门子 Simcenter™ 平台的强大功能，为您提供从零部件到整机的全链条仿真服务。</p>
+                    <p class="text-gray-600 mb-6">我们的解决方案专注于解决人形机器人研发过程中的核心痛点，如运动稳定性、能源效率、结构轻量化、噪声控制等，帮助您加速产品迭代，降低研发成本。</p>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-secondary mt-1 mr-2"></i>
+                            <span>多体动力学与运动控制仿真</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-secondary mt-1 mr-2"></i>
+                            <span>结构强度与轻量化设计</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-secondary mt-1 mr-2"></i>
+                            <span>伺服系统与减速器性能优化</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-secondary mt-1 mr-2"></i>
+                            <span>电池与热管理系统设计</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Challenges -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-primary mb-12">行业挑战</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+                    <div class="w-16 h-16 bg-primary-light rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-balance-scale text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">平衡与稳定</h3>
+                    <p class="text-gray-600">在复杂地形和动态环境下，保持机器人的平衡与稳定是一大难题。</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+                    <div class="w-16 h-16 bg-primary-light rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-battery-three-quarters text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">续航能力</h3>
+                    <p class="text-gray-600">有限的电池容量与复杂的运动模式之间的矛盾，制约了机器人的工作时长。</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+                    <div class="w-16 h-16 bg-primary-light rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-cogs text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">关节精度与可靠性</h3>
+                    <p class="text-gray-600">高精度、高刚性、高可靠性的关节设计是实现复杂动作的关键。</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+                    <div class="w-16 h-16 bg-primary-light rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-weight text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">轻量化设计</h3>
+                    <p class="text-gray-600">在保证结构强度的前提下，减轻机器人自重，以提高负载能力和能源效率。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Solutions -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-primary mb-12">我们的解决方案</h2>
+            <div class="space-y-12">
+                <!-- Solution 1 -->
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-bold text-primary mb-4">多体动力学与控制仿真</h3>
+                    <div class="grid md:grid-cols-2 gap-8 items-center">
+                        <div>
+                            <p class="text-gray-600 mb-4">利用 Simcenter 3D Motion 和 Simcenter Amesim，建立人形机器人的多体动力学模型，进行运动学和动力学分析，并与控制算法进行联合仿真，优化步态规划和控制策略。</p>
+                            <ul class="space-y-2">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-secondary mt-1 mr-2"></i>
+                                    <span>正向/逆向动力学分析</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-secondary mt-1 mr-2"></i>
+                                    <span>步态规划与仿真</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-secondary mt-1 mr-2"></i>
+                                    <span>ADAMS 与 MATLAB/Simulink 联合仿真</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="bg-gray-100 rounded-lg p-4">
+                            <img src="https://img.freepik.com/free-vector/humanoid-robot-with-digital-screen_23-2148817721.jpg?w=996&t=st=1695114413~exp=1695115013~hmac=8b0a5c3b6c37a1f3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3" alt="多体动力学与控制仿真" class="rounded-lg">
+                        </div>
+                    </div>
+                </div>
+                <!-- Solution 2 -->
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-bold text-primary mb-4">结构设计与轻量化</h3>
+                    <div class="grid md:grid-cols-2 gap-8 items-center">
+                        <div class="order-2 md:order-1 bg-gray-100 rounded-lg p-4">
+                            <img src="https://img.freepik.com/free-vector/robot-arm-industrial-robotics-concept_23-2148611086.jpg?w=996&t=st=1695114413~exp=1695115013~hmac=8b0a5c3b6c37a1f3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3" alt="结构设计与轻量化" class="rounded-lg">
+                        </div>
+                        <div class="order-1 md:order-2">
+                            <p class="text-gray-600 mb-4">通过 Simcenter 3D 的拓扑优化和形状优化功能，对机器人的关键结构（如腿部、手臂、躯干）进行轻量化设计，在确保强度和刚度的同时，最大限度地减轻重量。</p>
+                            <ul class="space-y-2">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-secondary mt-1 mr-2"></i>
+                                    <span>拓扑优化与点阵结构设计</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-secondary mt-1 mr-2"></i>
+                                    <span>复合材料结构分析</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-secondary mt-1 mr-2"></i>
+                                    <span>疲劳强度与耐久性评估</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- Solution 3 -->
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-bold text-primary mb-4">伺服系统与能源管理</h3>
+                    <div class="grid md:grid-cols-2 gap-8 items-center">
+                        <div>
+                            <p class="text-gray-600 mb-4">使用 Simcenter Amesim 和 Simcenter Flotherm，对机器人的伺服系统（电机、减速器、驱动器）和电池系统进行建模和仿真，优化能源分配，提高系统效率和续航能力。</p>
+                            <ul class="space-y-2">
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-secondary mt-1 mr-2"></i>
+                                    <span>伺服系统效率优化</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-secondary mt-1 mr-2"></i>
+                                    <span>电池充放电特性仿真</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-check-circle text-secondary mt-1 mr-2"></i>
+                                    <span>整机热管理系统设计</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="bg-gray-100 rounded-lg p-4">
+                            <img src="https://img.freepik.com/free-vector/robotics-microchip-technology_23-2148817720.jpg?w=996&t=st=1695114413~exp=1695115013~hmac=8b0a5c3b6c37a1f3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3" alt="伺服系统与能源管理" class="rounded-lg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-16 bg-primary text-white text-center">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-4">联系我们</h2>
+            <p class="text-lg mb-8 max-w-2xl mx-auto">让我们携手共进，突破人形机器人研发的技术瓶颈，共创智能机器人的美好未来。</p>
+            <a href="index.html#contact" class="bg-white text-primary font-bold py-3 px-8 rounded-full hover:bg-gray-100 transition-colors duration-300 inline-flex items-center">
+                立即咨询
+                <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">上海逸昂信息技术有限公司</h3>
+                    <p class="text-gray-400">西门子Simcenter铂金代理商</p>
+                    <div class="flex space-x-4 mt-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-weixin text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-weibo text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fas fa-envelope text-xl"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">快速链接</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white">首页</a></li>
+                        <li><a href="index.html#about" class="text-gray-400 hover:text-white">关于我们</a></li>
+                        <li><a href="index.html#products" class="text-gray-400 hover:text-white">产品中心</a></li>
+                        <li><a href="index.html#contact" class="text-gray-400 hover:text-white">联系我们</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">解决方案</h3>
+                    <ul class="space-y-2">
+                        <li><a href="automotive.html" class="text-gray-400 hover:text-white">汽车行业</a></li>
+                        <li><a href="evtol.html" class="text-gray-400 hover:text-white">Evtol</a></li>
+                        <li><a href="humanoid-robot.html" class="text-gray-400 hover:text-white">人形机器人</a></li>
+                        <li><a href="electronics.html" class="text-gray-400 hover:text-white">电子电器</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">联系我们</h3>
+                    <address class="not-italic text-gray-400">
+                        <p class="mb-2"><i class="fas fa-map-marker-alt mr-2"></i> 上海市浦东新区张江高科技园区博云路2号</p>
+                        <p class="mb-2"><i class="fas fa-phone mr-2"></i> 021-58888888</p>
+                        <p><i class="fas fa-envelope mr-2"></i> info@shanghai-eontech.com</p>
+                    </address>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-500 text-sm">
+                &copy; 2025 上海逸昂信息技术有限公司. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
