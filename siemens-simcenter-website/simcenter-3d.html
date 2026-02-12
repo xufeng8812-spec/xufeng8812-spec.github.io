@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simcenter 3D - 上海逸昂信息技术有限公司</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            DEFAULT: '#003366',
+                            light: '#00509E',
+                        },
+                        secondary: {
+                            DEFAULT: '#CC0000',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .text-shadow {
+                text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+            }
+        }
+    </style>
+    <style>
+        .hero-section {
+            background-image: url('https://img.freepik.com/free-vector/blue-digital-network-background_23-2148288107.jpg?w=996&t=st=1695114413~exp=1695115013~hmac=8b0a5c3b6c37a1f3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800">
+
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <a href="index.html" class="flex items-center space-x-2">
+                    <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center">
+                        <span class="text-white font-bold text-xl">E</span>
+                    </div>
+                    <div>
+                        <h1 class="text-primary font-bold text-xl">上海逸昂信息技术</h1>
+                        <p class="text-xs text-gray-500">Siemens Simcenter 铂金代理商</p>
+                    </div>
+                </a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-dark hover:text-primary transition-all-300">首页</a>
+                    <div class="relative group">
+                        <a href="index.html#about" class="text-dark hover:text-primary transition-all-300 flex items-center">
+                            关于我们
+                            <i class="fa fa-angle-down ml-1 text-xs"></i>
+                        </a>
+                        <div class="absolute left-0 top-full mt-1 bg-white shadow-lg rounded-md overflow-hidden w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                            <a href="vision.html" class="block px-4 py-2 text-dark hover:bg-primary hover:text-white transition-all-300">企业愿景</a>
+                            <a href="history.html" class="block px-4 py-2 text-dark hover:bg-primary hover:text-white transition-all-300">企业历史</a>
+                            <a href="clients.html" class="block px-4 py-2 text-dark hover:bg-primary hover:text-white transition-all-300">我们的客户</a>
+                        </div>
+                    </div>
+                    <div class="relative group">
+                        <a href="index.html#products" class="text-primary font-bold transition-all-300 flex items-center">
+                            产品中心
+                            <i class="fa fa-angle-down ml-1 text-xs"></i>
+                        </a>
+                        <div class="absolute left-0 top-full mt-1 bg-white shadow-lg rounded-md overflow-hidden w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                            <a href="simcenter-3d.html" class="block px-4 py-2 bg-primary text-white transition-all-300">Simcenter 3D</a>
+                            <a href="simcenter-star-ccm.html" class="block px-4 py-2 text-dark hover:bg-primary hover:text-white transition-all-300">Simcenter STAR-CCM+</a>
+                            <a href="simcenter-amesim.html" class="block px-4 py-2 text-dark hover:bg-primary hover:text-white transition-all-300">Simcenter Amesim</a>
+                            <a href="simcenter-testlab.html" class="block px-4 py-2 text-dark hover:bg-primary hover:text-white transition-all-300">Simcenter Testlab</a>
+                            <a href="simcenter-flotherm.html" class="block px-4 py-2 text-dark hover:bg-primary hover:text-white transition-all-300">Simcenter Flotherm</a>
+                            <a href="simcenter-floefd.html" class="block px-4 py-2 text-dark hover:bg-primary hover:text-white transition-all-300">Simcenter FloEFD</a>
+                        </div>
+                    </div>
+                    <a href="index.html#contact" class="text-dark hover:text-primary transition-all-300">联系我们</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-dark">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg absolute w-full">
+            <div class="container mx-auto px-4 py-2">
+                <a href="index.html" class="block py-2 text-dark border-b border-gray-100">首页</a>
+                <div class="relative">
+                    <a href="index.html#about" class="text-dark py-2 border-b border-gray-100 flex items-center justify-between">
+                        关于我们
+                        <i class="fa fa-angle-down text-xs"></i>
+                    </a>
+                    <div class="pl-4 border-l-2 border-gray-100 ml-2 mt-1">
+                        <a href="vision.html" class="block py-2 text-dark text-sm">企业愿景</a>
+                        <a href="history.html" class="block py-2 text-dark text-sm">企业历史</a>
+                        <a href="clients.html" class="block py-2 text-dark text-sm">我们的客户</a>
+                    </div>
+                </div>
+                <div class="relative">
+                    <a href="index.html#products" class="text-primary font-bold py-2 border-b border-gray-100 flex items-center justify-between">
+                        产品中心
+                        <i class="fa fa-angle-down text-xs"></i>
+                    </a>
+                    <div class="pl-4 border-l-2 border-gray-100 ml-2 mt-1">
+                        <a href="simcenter-3d.html" class="block py-2 text-primary font-bold text-sm">Simcenter 3D</a>
+                        <a href="simcenter-star-ccm.html" class="block py-2 text-dark text-sm">Simcenter STAR-CCM+</a>
+                        <a href="simcenter-amesim.html" class="block py-2 text-dark text-sm">Simcenter Amesim</a>
+                        <a href="simcenter-testlab.html" class="block py-2 text-dark text-sm">Simcenter Testlab</a>
+                        <a href="simcenter-flotherm.html" class="block py-2 text-dark text-sm">Simcenter Flotherm</a>
+                        <a href="simcenter-floefd.html" class="block py-2 text-dark text-sm">Simcenter FloEFD</a>
+                    </div>
+                </div>
+                <a href="index.html#contact" class="block py-2 text-dark">联系我们</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section text-white py-20">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4 text-shadow">Simcenter 3D</h1>
+            <p class="text-lg md:text-xl max-w-3xl mx-auto">集成的、开放的、可扩展的 3D CAE 解决方案，用于进行多物理场仿真</p>
+        </div>
+    </section>
+
+    <!-- Product Details -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                    <img src="https://img.freepik.com/free-vector/engineering-team-working-3d-modeling-software_23-2148806182.jpg?w=996&t=st=1695114413~exp=1695115013~hmac=8b0a5c3b6c37a1f3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3c3" alt="Simcenter 3D" class="rounded-lg shadow-lg">
+                </div>
+                <div>
+                    <h2 class="text-3xl font-bold text-primary mb-4">产品概述</h2>
+                    <p class="text-gray-600 mb-4">Simcenter 3D 是一款集成的计算机辅助工程 (CAE) 解决方案，它将几何处理、网格划分、分析求解和结果可视化等功能整合在一个统一的环境中。</p>
+                    <p class="text-gray-600 mb-6">作为 Siemens Xcelerator 解决方案组合的一部分，Simcenter 3D 帮助工程师和分析师在产品开发的早期阶段预测产品性能，从而减少物理原型的需求，缩短上市时间，并提高产品质量。</p>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-secondary mt-1 mr-2"></i>
+                            <span>支持结构、热、流体、电磁等多物理场分析</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-secondary mt-1 mr-2"></i>
+                            <span>提供强大的网格划分技术，适应复杂几何形状</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-secondary mt-1 mr-2"></i>
+                            <span>与 CAD 系统无缝集成，实现数据的高效传递</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-secondary mt-1 mr-2"></i>
+                            <span>开放的架构，支持第三方软件的集成</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Features -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-primary mb-12">核心功能</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+                    <div class="w-16 h-16 bg-primary-light rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-cube text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">集成建模环境</h3>
+                    <p class="text-gray-600">提供直观的 3D 建模工具，用于创建和编辑分析模型，支持直接从 CAD 导入几何数据。</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+                    <div class="w-16 h-16 bg-primary-light rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-project-diagram text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">多物理场耦合分析</h3>
+                    <p class="text-gray-600">能够模拟真实世界中的复杂物理现象，如流固耦合 (FSI)、热-结构耦合等。</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+                    <div class="w-16 h-16 bg-primary-light rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-chart-line text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">优化设计</h3>
+                    <p class="text-gray-600">内置参数化建模和优化算法，帮助工程师探索设计空间，找到最佳设计方案。</p>
+                </div>
+                 <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+                    <div class="w-16 h-16 bg-primary-light rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-microchip text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">电子冷却分析</h3>
+                    <p class="text-gray-600">专门针对电子设备的热管理，提供详细的流体和热分析能力。</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+                    <div class="w-16 h-16 bg-primary-light rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-car text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">耐久性和NVH</h3>
+                    <p class="text-gray-600">预测产品的疲劳寿命和噪音、振动与声振粗糙度 (NVH) 性能。</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+                    <div class="w-16 h-16 bg-primary-light rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-plug text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">开放性与可扩展性</h3>
+                    <p class="text-gray-600">通过 API 和脚本语言，允许用户自定义功能和工作流程，并与其他工具集成。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Application Areas -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-primary mb-12">应用领域</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white p-5 rounded-lg shadow text-center">
+                    <i class="fas fa-car-side text-4xl text-primary mb-4"></i>
+                    <h3 class="font-bold mb-2">汽车工业</h3>
+                </div>
+                <div class="bg-white p-5 rounded-lg shadow text-center">
+                    <i class="fas fa-plane text-4xl text-primary mb-4"></i>
+                    <h3 class="font-bold mb-2">航空航天</h3>
+                </div>
+                <div class="bg-white p-5 rounded-lg shadow text-center">
+                    <i class="fas fa-microchip text-4xl text-primary mb-4"></i>
+                    <h3 class="font-bold mb-2">电子电器</h3>
+                </div>
+                <div class="bg-white p-5 rounded-lg shadow text-center">
+                    <i class="fas fa-industry text-4xl text-primary mb-4"></i>
+                    <h3 class="font-bold mb-2">工业装备</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-16 bg-primary text-white text-center">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-4">了解更多关于 Simcenter 3D</h2>
+            <p class="text-lg mb-8 max-w-2xl mx-auto">填写下方表单，我们的技术专家将尽快与您联系，为您提供详细的产品信息和演示。</p>
+            <a href="index.html#contact" class="bg-white text-primary font-bold py-3 px-8 rounded-full hover:bg-gray-100 transition-colors duration-300 inline-flex items-center">
+                联系我们
+                <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">上海逸昂信息技术有限公司</h3>
+                    <p class="text-gray-400">西门子Simcenter铂金代理商</p>
+                    <div class="flex space-x-4 mt-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-weixin text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-weibo text-xl"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fas fa-envelope text-xl"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">快速链接</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white">首页</a></li>
+                        <li><a href="index.html#about" class="text-gray-400 hover:text-white">关于我们</a></li>
+                        <li><a href="index.html#products" class="text-gray-400 hover:text-white">产品中心</a></li>
+                        <li><a href="index.html#contact" class="text-gray-400 hover:text-white">联系我们</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">解决方案</h3>
+                    <ul class="space-y-2">
+                        <li><a href="simcenter-3d.html" class="text-gray-400 hover:text-white">Simcenter 3D</a></li>
+                        <li><a href="simcenter-star-ccm.html" class="text-gray-400 hover:text-white">Simcenter STAR-CCM+</a></li>
+                        <li><a href="simcenter-amesim.html" class="text-gray-400 hover:text-white">Simcenter Amesim</a></li>
+                        <li><a href="simcenter-testlab.html" class="text-gray-400 hover:text-white">Simcenter Testlab</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-bold mb-4">联系我们</h3>
+                    <address class="not-italic text-gray-400">
+                        <p class="mb-2"><i class="fas fa-map-marker-alt mr-2"></i> 上海市浦东新区张江高科技园区博云路2号</p>
+                        <p class="mb-2"><i class="fas fa-phone mr-2"></i> 021-58888888</p>
+                        <p><i class="fas fa-envelope mr-2"></i> info@shanghai-eontech.com</p>
+                    </address>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-500 text-sm">
+                &copy; 2025 上海逸昂信息技术有限公司. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
